@@ -7,3 +7,8 @@
 @Email   : wangyu03@smartdot.com
 @Software: PyCharm
 """
+def application(env, start_response):
+    start_response('200 OK', [('Content-Type','text/html')])
+    return [b"Hello World"]
+
+# uwsgi --http :9090 --wsgi-file manage.py
